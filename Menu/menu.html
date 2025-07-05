@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider bar menu</title>
+    <script src="https://kit.fontawesome.com/edc2caccf4.js" crossorigin="anonymous" defer></script>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+min-height:100vh;
+background:white;
+}
+
+.slidebar{
+position:absolute;
+width:60px;
+height:100vh;
+background:grey;
+overflow:hidden;
+transition:1s;
+}
+
+.slidebar:hover{
+width:300px;
+}
+.slidebar ul{
+position:relative;
+height:100vh;
+}
+
+.slidebar ul li{
+list-stile:none;
+}
+
+.slidebar ul li:hover{
+background:white;
+}
+.slidebar ul li a{
+position:relative;
+display:flex;
+white-space:nowrap;
+text-decoration:none;
+}
+.slidebar ul li a .icon{
+display:flex;
+position:relative;
+justify-content:center;
+align-items:center;
+min-width:60px;
+height:60px;
+font-size:1.5em;
+color:black;
+}
+
+.slidebar ul li a .text{
+position:relative;
+display:flex;
+align-items:center;
+height:60px;
+font-size:1em;
+color:black;
+text-transform:uppercase;
+letter-spacing:0.05em;
+}
+
+.slidebar ul li.logo{
+margin-bottom:50px;
+}
+.slidebar ul li.logo .icon{
+font-size:2em;
+}
+.slidebar ul li.logo .text{
+font-size:1.2em;
+font-weight:500;
+}
+
+.slidebar ul li.logo:hover{
+background:grey;
+}
+.bottom{
+position:absolute;
+bottom:0;
+width:100%;
+}
+
+</style>
+<body>
+<div class="slidebar">
+    <ul>
+        <li class="logo">
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-toilet"></i></span>
+                <span class="text">Website logo</span>
+            </a>
+        </li>
+         <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <span class="text">Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-inbox"></i></span>
+                <span class="text">Inbox</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="text">Analytics</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-regular fa-cart-shopping"></i></span>
+                <span class="text">Order</span>
+            </a>
+        </li>
+         <li>
+            <a href="#">
+                <span class="icon"><i class="fa-sharp fa-solid fa-gear"></i></span>
+                <span class="text">Setting</span>
+            </a>
+        </li>
+
+        <div class="bottom">
+            <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+
+        </div>
+    </ul>
+</div>
+</body>
+</html>

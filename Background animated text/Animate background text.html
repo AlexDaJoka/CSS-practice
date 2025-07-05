@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+display:flex;
+justify-content:center;
+align-item:center;
+background:black;
+}
+.box{
+position:relative;
+display:flex;
+flex-direction:column;
+}
+.box h2{
+font-size:2.25em;
+-webkit-text-stroke:0.9px #800000;
+color:transparent;
+line-height:1em;
+text-transform:uppercase;
+letter-spacing:0.05em;
+animation:animate 2.5s linear infinite;
+animation-delay:calc(var(--i)*-0.25s);
+}
+
+@keyframes animate{
+
+0%,10%{
+color:#A52A2A;
+filter:hue-rotate(0deg);
+}
+10.0000001%{
+color:transparent;
+}
+100%{
+color:color:transparent;
+filter:hue-rotate(720deg);
+}
+
+}
+</style>
+<body>
+<div class="box">
+    <h2 style="--i:0;">I love programming</h2>
+    <h2 style="--i:1;">I love programming</h2>
+    <h2 style="--i:2;">I love programming</h2>
+    <h2 style="--i:3;">I love programming</h2>
+    <h2 style="--i:4;">I love programming</h2>
+    <h2 style="--i:5;">I love programming</h2>
+    <h2 style="--i:6;">I love programming</h2>
+    <h2 style="--i:7;">I love programming</h2>
+    <h2 style="--i:8;">I love programming</h2>
+    <h2 style="--i:9;">I love programming</h2>
+</div>
+
+</body>
+</html>

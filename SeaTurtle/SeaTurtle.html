@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="/libs/gsap/gsap.min.js" defer></script>
+    <title>SeaTurtle</title>
+    <script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+<script src="/libs/gsap/ScrollSmoother.min.js" defer ></script>
+    <script src="/js/app-3-2.js" defer></script>
+    <script src="/js/anime.min2.js" defer></script>
+    <script src="/js/gsap.min2.js" defer></script>
+</head>
+
+<style>
+
+/* will-change */
+.content, .header, .container, .logo {
+will-change:transform;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+:root {
+--index: calc(1vw + 1vh);
+--transition: .75s cubic-bezier(.2, .6, 0, 1);
+}
+
+body, html{
+overflow-x:hidden;
+}
+
+
+
+.image{
+z-index:-1;
+}
+.menu{
+z-index:9999;
+position:absolute;
+display:flex;
+}
+
+.naw-number{
+text-alight:center;
+font-weight: 500;
+font-family:;
+text-decoration:none;
+color:white;
+font-size: calc(var(--index) * 2);
+padding:20px;
+}
+
+.naw-item{
+text-alight:center;
+font-weight: 500px;
+font-family:;
+text-decoration:none;
+color:white;
+font-size: calc(var(--index) * 2);
+padding:20px;
+transition:color 0.3s linear;
+}
+.naw-item:hover{
+color:#98FB98;
+}
+
+.logo{
+z-index:99999;
+}
+
+.logo h2{
+font-size: calc(var(--index) * 2);
+font-weight: 900;
+position:absolute;
+top:40vh;
+left:10vw;
+color:orange;
+}
+
+.logo a{
+display: inline-block;
+position:absolute;
+top:50vh;
+font-size: calc(var(--index) * 2);
+left:7vw;
+}
+
+.main{
+background:linear-gradient(to left,#00B4DB,#0083B0,#00B4DB);
+height:100%;
+position:relative;
+
+}
+.information{
+align-item:center;
+flex-direction:column;
+}
+.left {
+position:relative;
+top:10vh;
+max-width:104vw;
+left:10vw;
+width:30vw;
+}
+.left__item{
+position:relative;
+top:15vw;
+left:20;
+font-size:var(--index);
+}
+.right{
+position:relative;
+right:-50vw;
+width:40vw;
+}
+
+
+.right__item{
+position:relative;
+top:-10vh;
+font-size:var(--index);
+}
+
+.main2{
+background:linear-gradient(to top,#373B44,#4286f4,#373B44);
+height:100vh;
+position:relative;
+width:100%;
+
+}
+
+.filter{
+transition: opacity 5s ease-in-out;
+opacity:0;
+}
+.filter.show{
+opacity:1;
+}
+
+.filler img{
+position:relative;
+right:-60vw;
+top:20vh;
+}
+.filler p{
+position:relative;
+top:-20vh;
+width:50vw;
+left:5vw;
+}
+
+.footer{
+background:black;
+height:30vh;
+width:100vw;
+color:white;
+}
+.social{
+position:relative;
+right:-25vw;
+top:10vh;
+}
+
+
+
+</style>
+<body>
+<div class="container">
+    <div class="content">
+    <header class="header">
+<div class="menu">
+    <a class="naw-item" href="#">О нас</a>
+    <a class="naw-item" href="#">Пожертвовать</a>
+    <a class="naw-number">7 999 888 77 66 </a>
+
+            <div data-speed=".55" class="main-logo">
+ <div  class="logo">
+            <h2>SeaTurtle</h2>
+            <a>jbnlsenglnselhnrtlh</a>
+            </div>
+</div>
+</div>
+
+
+
+<div class="image">
+<img data-speed=".10" src="https://walldeco.ua/img/archive/52/45841.jpg" height='50%' width="100%">
+    </div>
+
+    </header>
+
+<main class="main">
+    <div class="information">
+
+        <div class="left">
+            <div class="left__item">
+            <a>Морские черепахи (лат. Cheloniidae) — семейство черепах из надсемейства Chelonioidea. Объединяет крупных морских и океанических черепах, обладающих обтекаемым сердцевидным или овальным панцирем, покрытым роговыми щитками, и невтягивающимися конечностями-ластами. Большая голова не убирается под панцирь.
+            </a>
+        </div>
+        </div>
+
+        <div class="right">
+            <div class="right__item">
+            <img  src="https://i.pinimg.com/236x/f3/c7/c1/f3c7c17de5bea374a451a181c72a4340.jpg" height="300px" width="300px">
+            </div>
+        </div>
+
+        <div class="left">
+             <div class="left__item">
+<img  src="https://i.pinimg.com/236x/0b/02/91/0b02913da9bad799e08027368b15c0b4.jpg" height="300px" width="300px">
+             </div>
+             </div>
+
+         <div class="right">
+             <div class="right__item">
+            <a>Морские черепахи обладают незаурядными способностями в навигации, предположительно ориентируясь по магнитному полю Земли. Они способны безошибочно вернуться на место своего рождения по прошествии многих лет. Особенно выделяется оливковая морская черепаха, представители данного вида собираются для спаривания в один день на каком-то пляже и многие тысячи черепах практически одновременно откладывают миллионы яиц; данный феномен известен как «аррибида» (с исп. — «пришествие»). Атлантическая ридлея, находящаяся на грани уничтожения, и вовсе размножается только на одном пляже мира, находящемся в Мексике.</a>
+        </div>
+         </div>
+    </div>
+
+</main>
+
+    <main class="main2">
+<div class="inform-block">
+    <div class="filler">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Hawksbill_Sea_Turtle_%28Critically_Endangered_Species%29.jpg" width="300px" height="300px">
+    </div>
+</div>
+
+        <div class="inform-block">
+    <div  class="filler">
+        <p>Средняя продолжительность жизни морских черепах определяется в 80 лет. Половая зрелость у самок наступает примерно в 30 лет, когда они первый раз в жизни возвращаются на пляж, где когда-то вылупились. В течение всего года гнездования, который случается раз в два или четыре года, самка откладывает от четырёх до семи кладок по 150—200 яиц. Спаривание черепах происходит в воде, в прибрежной зоне, зачастую количества спермы, полученной самкой, хватает на несколько кладок.
+
+Способ создания кладки одинаков среди всех видов морских черепах: самка ищет подходящее место на пляже и начинает разгребать песок задними лапами, пока не образуется круглая выемка 40—50 сантиметров в глубину. В данную яму самка откладывает яйца (их количество зависит от многих факторов), после чего засыпает песком и аккуратно утрамбовывает, делая кладку как можно более незаметной. Весь процесс занимает около часа, после чего самка возвращается в океан и больше не заботится о своём потомстве.
+
+Иногда в кладках встречаются неоплодотворённые яйца, но нечасто. Инкубационный период длится около двух месяцев и напрямую зависит от температуры песка, в который зарыта кладка. Так же от температуры зависит и будущий пол черепашек: самцы развиваются при более низкой температуре, самки — при более высокой[5] (либо детёныши погибают вследствие слишком низкой или высокой температуры). По истечении инкубационного периода маленькие черепахи пробивают скорлупу специальным яйцевым зубом и выбираются на воздух сквозь толщу песка.
+
+</p>
+    </div>
+</div>
+
+    </main>
+
+  <footer class="footer">
+      <div class="social"><a>Почта@Яндекс</a></div>
+    <div class="social"><a class="fa-brands fa-vk fa-2xl" style="
+    color: #0000FF; text-decoration:none;display:flex; margin-left:30vw;"
+       href="#"></a></div>
+    <div class="social"><a class="fa-brands fa-telegram fa-2xl"
+       style="
+       color: #00c7fd; text-decoration:none; display:flex; margin-left:40vw;"
+        href="#"></a></div>
+ <div class="social"><a class="fa-brands fa-instagram fa-2xl"
+       style="
+       color: #9a234f;  text-decoration:none; display:flex; margin-left:50vw;"
+       href="#"></a></div>
+</footer>
+<script src="https://kit.fontawesome.com/edc2caccf4.js" crossorigin="anonymous"></script>
+
+
+
+</div>
+</div>
+
+<script>
+   window.addEventListener('scroll', function() {
+  var element = document.querySelector('.filter');
+  var position = element.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+  if (position < windowHeight) {
+    element.classList.add('show');
+  }
+});
+</script>
+</body>
+</html>

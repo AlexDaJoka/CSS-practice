@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cubes</title>
+</head>
+<style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border:box;
+  }
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:black;
+}
+
+.container{
+left:400px;
+position:relative;
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+-webkit-box-reflect:below 0px linear-gradient(transparent,#0005);
+}
+
+.container .box{
+position:relative;
+width:200px;
+height:200px;
+background:linear-gradient(45deg,#00f376 10%,transparent 10%,transparent 50%,
+#00f376 50%,#00f376 60%,transparent 60%,transparent 100%);
+background-size:40px 40px;
+transform:rotate(calc(var(--i)*90deg));
+filter:hue-rotate(calc(var(--i)*90deg));
+animation:animate 0.5s linear infinite;
+}
+
+@keyframes animate{
+0%{
+background-position:0;
+}
+100%{
+background-position:40px;
+}
+}
+.container2{
+position:relative;
+display:flex;
+top:-200px;
+left:-400px;
+justify-content:space-between;
+align-items:center;
+width:100%;
+
+}
+.container2 .box2{
+position:relative;
+width:200px;
+height:200px;
+background:linear-gradient(45deg,#00f376 10%,transparent 10%,transparent 50%,
+#00f376 50%,#00f376 60%,transparent 60%,transparent 100%);
+background-size:40px 40px;
+transform:rotate(calc(var(--i)*90deg));
+filter:hue-rotate(calc(var(--i)*90deg));
+animation:animate 0.5s linear infinite;
+}
+
+</style>
+<body>
+<div class="container">
+  <div class="box" style="--i:1;"></div>
+  <div class="box" style="--i:3;"></div>
+  <div class="box" style="--i:2;"></div>
+  <div class="box" style="--i:4;"></div>
+</div>
+<div class="container2">
+  <div class="box2" style="--i:1;"></div>
+  <div class="box2" style="--i:3;"></div>
+  <div class="box2" style="--i:2;"></div>
+  <div class="box2" style="--i:4;"></div>
+</div>
+</body>
+</html>
